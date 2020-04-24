@@ -1,0 +1,5 @@
+D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\bin\Debug\DB.Interface.dll
+D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\bin\Debug\DB.Interface.pdb
+D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.csprojResolveAssemblyReference.cache
+D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.dll
+D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.pdb
