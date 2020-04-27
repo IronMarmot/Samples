@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyReflection", "MyReflection\MyReflection.csproj", "{711F1EC3-012B-449B-8D7E-EEC461BC1EB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB.Interface", "DB.Interface\DB.Interface.csproj", "{22BE5973-6AD7-43E9-B4C9-DEEDA81F781C}"
@@ -10,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB.SqlServer", "DB.SqlServer\DB.SqlServer.csproj", "{DF59DAD7-AC6E-4F14-B27E-1A3D741C7EC2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB.Oracle", "DB.Oracle\DB.Oracle.csproj", "{62FC4E89-D500-4EBF-9CC3-3C6FCF0DF773}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{9FD5A755-669B-4075-8189-B5F33892FEDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,8 +41,15 @@ Global
 		{62FC4E89-D500-4EBF-9CC3-3C6FCF0DF773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62FC4E89-D500-4EBF-9CC3-3C6FCF0DF773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62FC4E89-D500-4EBF-9CC3-3C6FCF0DF773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FD5A755-669B-4075-8189-B5F33892FEDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD5A755-669B-4075-8189-B5F33892FEDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD5A755-669B-4075-8189-B5F33892FEDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD5A755-669B-4075-8189-B5F33892FEDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E35034E-AF55-4D3F-96C8-906951EEBAF8}
 	EndGlobalSection
 EndGlobal

@@ -3,3 +3,9 @@ D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\bin\Debug\DB.Interfa
 D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.csprojResolveAssemblyReference.cache
 D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.dll
 D:\StudyDemo\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.pdb
+E:\StydyDemos\Samples\MyReflection\MyReflection\DB.Interface\bin\Debug\DB.Interface.dll
+E:\StydyDemos\Samples\MyReflection\MyReflection\DB.Interface\bin\Debug\DB.Interface.pdb
+E:\StydyDemos\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.csproj.CoreCompileInputs.cache
+E:\StydyDemos\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.dll
+E:\StydyDemos\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.pdb
+E:\StydyDemos\Samples\MyReflection\MyReflection\DB.Interface\obj\Debug\DB.Interface.csprojAssemblyReference.cache

@@ -1,1 +1,3 @@
 D:\StudyDemo\Samples\MyReflection\MyReflection\MyReflection\bin\Debug\MyReflection.exe.config
+E:\StydyDemos\Samples\MyReflection\MyReflection\MyReflection\obj\Debug\MyReflection.csprojAssemblyReference.cache
+E:\StydyDemos\Samples\MyReflection\MyReflection\MyReflection\obj\Debug\MyReflection.csproj.CoreCompileInputs.cache
