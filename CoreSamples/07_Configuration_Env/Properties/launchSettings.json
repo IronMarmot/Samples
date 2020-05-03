@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "07_Configuration_Env": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "env1": "env1",
+        "key2": "value2",
+        "env1:key3": "value3",
+        "env1__key4": "value4",
+        "env1_": "env1_",
+        "key1": "value1"
+      }
+    }
+  }
+}

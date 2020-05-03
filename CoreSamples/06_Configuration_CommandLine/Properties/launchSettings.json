@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "06_Configuration_CommandLine": {
+      "commandName": "Project",
+      "commandLineArgs": "cmd1=value1 /cmd2=value2 /cmd3 value3 --cmd4=value4 --cmd5 value5 --cmd6:cmd6 value6" // --k1 value1_new -k2 value2_new
+    }
+  }
+}
