@@ -33,7 +33,7 @@ namespace _03_DependencyInjectionScopeAndDisposableDemo
             });*/
             //services.AddScoped<IOrderService, OrderService>();
             //services.AddTransient<IOrderService, OrderService>();
-            services.AddTransient<IOrderService,orders>();
+            services.AddTransient<IOrderService, OrderService>();
             //IOrderService order = new OrderService();
             //services.AddSingleton<IOrderService>(order);
 

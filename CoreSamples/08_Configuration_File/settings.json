@@ -4,6 +4,6 @@
   "Section1": {
     "key3": "value3",
     "key4": 10,
-    "key5": "ture"
+    "key5": true
   }
 }
