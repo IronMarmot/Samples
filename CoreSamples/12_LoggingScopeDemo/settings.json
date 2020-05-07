@@ -5,6 +5,7 @@
     },
 
     "Console": {
+      "IncludeScopes": true,
       "loglevel": {
         "default": "information",
         "_12_LoggingScopeDemo.Program": "Trace"

@@ -27,7 +27,7 @@ namespace _12_LoggingScopeDemo
             logger.LogDebug("this is debug");
             logger.LogInformation("this is information");
             logger.LogWarning("this is warning");
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(100);
             Console.WriteLine("=========以下是scope========");
 
             while (Console.ReadKey().Key != ConsoleKey.Escape)
