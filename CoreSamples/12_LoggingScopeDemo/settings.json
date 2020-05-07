@@ -1,0 +1,14 @@
+{
+  "logging": {
+    "loglevel": {
+
+    },
+
+    "Console": {
+      "loglevel": {
+        "default": "information",
+        "_12_LoggingScopeDemo.Program": "Trace"
+      }
+    }
+  }
+}

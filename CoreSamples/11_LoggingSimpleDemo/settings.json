@@ -1,0 +1,33 @@
+{
+  "logging": {
+    "loglevel": {
+      "Default": "information"
+    },
+    "Console": {
+      "loglevel": {
+        "Default": "None",
+        "_11_LoggingSimpleDemo.Program": "Trace",
+        "_11_LoggingSimpleDemo.OrderService": "Trace",
+        "aLogger": "Trace"
+      }
+    }
+  }
+}
+//{
+//  "Logging": {
+//    "LogLevel": {
+//      "Default": "Debug",
+//      "Microsoft": "Warning",
+//      "Microsoft.Hosting.Lifetime": "Information"
+//    },
+//    "Console": {
+//      "LogLevel": {
+//        "Default": "Debug",
+//        "Program": "Trace",
+//        "alogger": "Trace",
+//        "LoggingSimpleDemo.OrderService": "Trace"
+//      }
+//    }
+//  }
+//}
+
