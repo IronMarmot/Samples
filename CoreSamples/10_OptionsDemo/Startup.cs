@@ -40,7 +40,7 @@ namespace _10_OptionsDemo
             /*services.Configure<OrderOptions>(Configuration.GetSection("MaxOrderCount"));
             services.AddSingleton<IOrderService, OrderService>();*/
 
-            //扩种方法封装
+            //扩展方法封装
             services.AddOrderService(Configuration.GetSection("MaxOrderCount"));
 
             services.AddControllers();

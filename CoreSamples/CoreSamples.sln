@@ -25,13 +25,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{91249BF0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_OptionsDemo", "10_OptionsDemo\10_OptionsDemo.csproj", "{85D07704-5590-45A7-8083-257B2D8D8285}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_LoggingSimpleDemo", "11_LoggingSimpleDemo\11_LoggingSimpleDemo.csproj", "{27A6F190-E36E-41F1-9F6C-5831C5536EA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_LoggingSimpleDemo", "11_LoggingSimpleDemo\11_LoggingSimpleDemo.csproj", "{27A6F190-E36E-41F1-9F6C-5831C5536EA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_LoggingScopeDemo", "12_LoggingScopeDemo\12_LoggingScopeDemo.csproj", "{2BE44F20-9656-4096-ACCA-AA7B6913EFED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_LoggingScopeDemo", "12_LoggingScopeDemo\12_LoggingScopeDemo.csproj", "{2BE44F20-9656-4096-ACCA-AA7B6913EFED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_LoggingSerilogDemo", "13_LoggingSerilogDemo\13_LoggingSerilogDemo.csproj", "{C5185E0C-B572-45A7-A2EB-2D4090C1260C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_LoggingSerilogDemo", "13_LoggingSerilogDemo\13_LoggingSerilogDemo.csproj", "{C5185E0C-B572-45A7-A2EB-2D4090C1260C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_MiddlewareDemo", "14_MiddlewareDemo\14_MiddlewareDemo.csproj", "{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_MiddlewareDemo", "14_MiddlewareDemo\14_MiddlewareDemo.csproj", "{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16_StaticFileDemo", "16_StaticFileDemo\16_StaticFileDemo.csproj", "{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +118,8 @@ Global
 		{85D07704-5590-45A7-8083-257B2D8D8285} = {91249BF0-A784-4260-8CD4-01B206C2605C}
 		{27A6F190-E36E-41F1-9F6C-5831C5536EA0} = {91249BF0-A784-4260-8CD4-01B206C2605C}
 		{2BE44F20-9656-4096-ACCA-AA7B6913EFED} = {91249BF0-A784-4260-8CD4-01B206C2605C}
+		{C5185E0C-B572-45A7-A2EB-2D4090C1260C} = {91249BF0-A784-4260-8CD4-01B206C2605C}
+		{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A} = {91249BF0-A784-4260-8CD4-01B206C2605C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55F02DB8-CF87-433E-B363-0500DF9A05C0}
