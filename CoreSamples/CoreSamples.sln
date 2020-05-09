@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_LoggingSerilogDemo", "13
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14_MiddlewareDemo", "14_MiddlewareDemo\14_MiddlewareDemo.csproj", "{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_ExceptionDemo", "15_ExceptionDemo\15_ExceptionDemo.csproj", "{D78D01FD-6FB6-4F15-8AA4-B5C4FE573FD3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16_StaticFileDemo", "16_StaticFileDemo\16_StaticFileDemo.csproj", "{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}"
 EndProject
 Global
@@ -97,6 +99,10 @@ Global
 		{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ABF3FBF-3437-42FE-BE8F-F69D58FB6E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78D01FD-6FB6-4F15-8AA4-B5C4FE573FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78D01FD-6FB6-4F15-8AA4-B5C4FE573FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78D01FD-6FB6-4F15-8AA4-B5C4FE573FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78D01FD-6FB6-4F15-8AA4-B5C4FE573FD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED50DB9D-093E-4839-87CF-4C7C7DE598F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
