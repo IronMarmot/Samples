@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcGreeter", "..\GrpcGreet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcGreeterClient", "..\GrpcGreeterClient\GrpcGreeterClient.csproj", "{48BAFF74-9F39-4310-8A14-D59A3B75E21F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gprc", "gprc", "{6E6E0087-36F8-474C-AB37-C6482BEED486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "..\ContosoUniversity\ContosoUniversity.csproj", "{259EDEEF-7008-400C-8495-561ECF382945}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,17 @@ Global
 		{48BAFF74-9F39-4310-8A14-D59A3B75E21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48BAFF74-9F39-4310-8A14-D59A3B75E21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48BAFF74-9F39-4310-8A14-D59A3B75E21F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{259EDEEF-7008-400C-8495-561ECF382945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259EDEEF-7008-400C-8495-561ECF382945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259EDEEF-7008-400C-8495-561ECF382945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259EDEEF-7008-400C-8495-561ECF382945}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD36092A-160C-48D5-BDAB-82613BED5141} = {6E6E0087-36F8-474C-AB37-C6482BEED486}
+		{48BAFF74-9F39-4310-8A14-D59A3B75E21F} = {6E6E0087-36F8-474C-AB37-C6482BEED486}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3CFC989-4079-47BA-B173-2EFD09C2C5EA}
