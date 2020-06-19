@@ -27,7 +27,8 @@ namespace ContosoUniversity
         {
             services.AddDbContext<UniversityContext>(options=>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("UniversityContext")); 
+                //options.UseSqlServer(Configuration.GetConnectionString("UniversityContext")); 
+                options.UseMySQL(Configuration.GetConnectionString("MySqlContext"));
             });
             services.AddControllersWithViews();
         }
