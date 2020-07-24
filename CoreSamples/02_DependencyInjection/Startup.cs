@@ -34,7 +34,7 @@ namespace _02_DependencyInjection
 
             #region 其他注册方式
             //直接注入实例
-            services.AddSingleton<IOrderService>(new OrderService());
+            //services.AddSingleton<IOrderService>(new OrderService());
             ////工厂注册
             //services.AddSingleton<IOrderService>(factory =>
             //{
@@ -45,12 +45,11 @@ namespace _02_DependencyInjection
             #region 尝试注册
             //TryAdd...，相同类型的不会重复注入
             services.TryAddSingleton<IOrderService, OrderService>();//不会注入，相同类型的都不会注入
-            services.TryAddSingleton<IOrderService, OrderServiceEx>();//不会注入，相同类型的都不会注入
+            //services.TryAddSingleton<IOrderService, OrderServiceEx>();//不会注入，相同类型的都不会注入
 
             //TryAddIEnumerable,可以注入不同实现
-            //services.TryAddEnumerable(services.AddSingleton<IOrderService, OrderService>());//注入报错,System.ArgumentException
             services.TryAddEnumerable(ServiceDescriptor.Singleton<IOrderService, OrderServiceEx>());//可以注入
-
+            //services.TryAddEnumerable(services.AddSingleton<IOrderService, OrderServiceEx>());//注入报错,System.ArgumentException
             //注入报错,System.ArgumentException
             //services.TryAddEnumerable(ServiceDescriptor.Singleton<IOrderService>(factory =>
             //{
@@ -59,9 +58,9 @@ namespace _02_DependencyInjection
             #endregion
 
             #region 服务替换和移除
-            services.Replace(ServiceDescriptor.Singleton<IOrderService, OrderServiceEx>());//经测试，这里只能替换非尝试注册的服务
-            services.Remove(ServiceDescriptor.Singleton<IOrderService, OrderService>());
-            //services.RemoveAt(0);
+            services.Replace(ServiceDescriptor.Singleton<IOrderService, OrderService>());//移除第一个相同类型的服务，并添加该服务
+            services.Remove(ServiceDescriptor.Singleton<IOrderService, OrderService>());//不起作用，不是service的方法
+            services.RemoveAt(0);//不起作用，不是service的方法
             //services.RemoveAll<IOrderService>();
             #endregion
 

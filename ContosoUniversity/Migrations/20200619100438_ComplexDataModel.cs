@@ -86,7 +86,7 @@ namespace ContosoUniversity.Migrations
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
-
+            
             migrationBuilder.CreateTable(
                 name: "Department",
                 columns: table => new

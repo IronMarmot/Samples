@@ -19,7 +19,7 @@ namespace _04_DIAutofacDemo
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+            .UseServiceProviderFactory(new AutofacServiceProviderFactory())//启用autofac，使用第三方组件时，需先在这里注册。
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
