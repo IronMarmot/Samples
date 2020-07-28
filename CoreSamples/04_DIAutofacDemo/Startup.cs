@@ -58,7 +58,7 @@ namespace _04_DIAutofacDemo
 
             #region AOP
             //分3步，先注册拦截器，通过InterceptedBy定义服务允许的拦截器类型，再开启拦截器
-            //如果注册多个拦截器，那么拦截器都会执行，而且是按照注册的顺序
+            //如果注册多个拦截器，那么拦截器都会执行，而且是按照注册的顺序执行
             containerBuilder.RegisterType<Interceptor>();
             containerBuilder.RegisterType<Intercepotor2>();
             containerBuilder.RegisterType<MyService>().As<IMyService>().InterceptedBy(new Type[] { typeof(Intercepotor2),typeof(Interceptor) }).EnableInterfaceInterceptors();

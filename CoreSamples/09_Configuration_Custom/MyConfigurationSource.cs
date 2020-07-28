@@ -12,4 +12,12 @@ namespace _09_Configuration_Custom
             return  new MyConfigurationProvider();
         }
     }
+
+    class CustomConfigurationSource : IConfigurationSource
+    {
+        public IConfigurationProvider Build(IConfigurationBuilder builder)
+        {
+            return new MyConfigurationProvider();
+        }
+    }
 }
