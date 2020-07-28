@@ -1,0 +1,15 @@
+{"@t":"2020-07-28T08:27:33.6703563Z","@mt":"Starting web host"}
+{"@t":"2020-07-28T08:30:44.1604667Z","@mt":"Information:Starting web host"}
+{"@t":"2020-07-28T08:30:44.2119253Z","@mt":"Debug!!!","@l":"Debug"}
+{"@t":"2020-07-28T08:30:44.2128317Z","@mt":"Warning!!!","@l":"Warning"}
+{"@t":"2020-07-28T08:32:56.1723514Z","@mt":"Information:Starting web host"}
+{"@t":"2020-07-28T08:32:56.2231298Z","@mt":"Warning!!!","@l":"Warning"}
+{"@t":"2020-07-28T09:03:12.9292118Z","@mt":"Information:Starting web host"}
+{"@t":"2020-07-28T09:03:13.0002707Z","@mt":"Debug!!!","@l":"Debug"}
+{"@t":"2020-07-28T09:03:13.0006378Z","@mt":"Warning!!!","@l":"Warning"}
+{"@t":"2020-07-28T09:05:29.4154065Z","@mt":"Information:Starting web host"}
+{"@t":"2020-07-28T09:05:36.0073418Z","@mt":"Debug!!!","@l":"Debug"}
+{"@t":"2020-07-28T09:05:36.0076973Z","@mt":"Warning!!!","@l":"Warning"}
+{"@t":"2020-07-28T09:05:38.3509660Z","@mt":"create a log data.","SourceContext":"_13_LoggingSerilogDemo.Controllers.WeatherForecastController","ActionId":"20977dbc-0ef1-4905-b389-0d891a84f4c4","ActionName":"_13_LoggingSerilogDemo.Controllers.WeatherForecastController.Get (13_LoggingSerilogDemo)","RequestId":"0HM1IQLID9UJI:00000001","RequestPath":"/weatherforecast","SpanId":"|f1602ed4-4e184b3e72af1549.","TraceId":"f1602ed4-4e184b3e72af1549","ParentId":""}
+{"@t":"2020-07-28T09:06:50.7448769Z","@mt":"create a log data.","SourceContext":"_13_LoggingSerilogDemo.Controllers.WeatherForecastController","ActionId":"20977dbc-0ef1-4905-b389-0d891a84f4c4","ActionName":"_13_LoggingSerilogDemo.Controllers.WeatherForecastController.Get (13_LoggingSerilogDemo)","RequestId":"0HM1IQLID9UJI:00000003","RequestPath":"/weatherforecast","SpanId":"|f1602ed5-4e184b3e72af1549.","TraceId":"f1602ed5-4e184b3e72af1549","ParentId":""}
+{"@t":"2020-07-28T09:07:22.0419339Z","@mt":"create a log data.","SourceContext":"_13_LoggingSerilogDemo.Controllers.WeatherForecastController","ActionId":"20977dbc-0ef1-4905-b389-0d891a84f4c4","ActionName":"_13_LoggingSerilogDemo.Controllers.WeatherForecastController.Get (13_LoggingSerilogDemo)","RequestId":"0HM1IQLID9UJI:00000005","RequestPath":"/weatherforecast","SpanId":"|f1602ed6-4e184b3e72af1549.","TraceId":"f1602ed6-4e184b3e72af1549","ParentId":""}

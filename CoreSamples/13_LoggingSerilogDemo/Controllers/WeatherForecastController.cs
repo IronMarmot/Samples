@@ -26,6 +26,8 @@ namespace _13_LoggingSerilogDemo.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            //logger被serilog接管。
+            _logger.LogInformation("create a log data.");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
