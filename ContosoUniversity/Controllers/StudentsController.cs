@@ -34,8 +34,8 @@ namespace ContosoUniversity.Controllers
             }
 
             var student = await _context.Students
-                .Include(o=>o.Enrollments)
-                .ThenInclude(o=>o.Course)
+                .Include(o => o.Enrollments)
+                .ThenInclude(o => o.Course)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (student == null)
@@ -59,11 +59,18 @@ namespace ContosoUniversity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,LastName,FirstMidName,EnrollmentDate")] Student student)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(student);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(student);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch (DbUpdateException)
+            {
+                ModelState.AddModelError("", "Unable to save changes.");
             }
             return View(student);
         }
