@@ -25,7 +25,7 @@ namespace _10_OptionsDemo.service
         //}
         #endregion
 
-        #region 当服务需要从配置中读取值时，如何操作?当然可以在OrderOptions中用配置框架来读取值，但这样的话，服务就依赖配置框架了，因此，我们使用IOptions选项框架
+        #region 当服务需要从配置中读取值时，如何操作?当然可以在OrderOptions中用配置框架强绑定方式来读取值，但这样的话，服务就依赖配置框架了，因此，我们使用IOptions选项框架
         /*IOptions<OrderOptions> options;
         public OrderService(IOptions<OrderOptions> options)
         {

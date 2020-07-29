@@ -14,5 +14,12 @@ namespace Microsoft.Extensions.Configuration
             configurationBuilder.Add(myConfigurationSource);
             return configurationBuilder;
         }
+
+        public static IConfigurationBuilder AddCustomSource(this IConfigurationBuilder configurationBuilder)
+        {
+            CustomConfigurationSource customConfigurationSource = new CustomConfigurationSource();
+            configurationBuilder.Add(customConfigurationSource);
+            return configurationBuilder;
+        }
     }
 }

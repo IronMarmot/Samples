@@ -11,11 +11,17 @@ namespace _09_Configuration_Custom
             IConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
             //configurationBuilder.Add(new MyConfigurationSource());
             configurationBuilder.AddSource();
+            configurationBuilder.AddCustomSource();
 
             IConfigurationRoot configurationRoot= configurationBuilder.Build();
             ChangeToken.OnChange(()=> configurationRoot.GetReloadToken(), () =>
             {
                 Console.WriteLine(configurationRoot["time"]);
+            });
+
+            ChangeToken.OnChange(() =>configurationRoot.GetReloadToken(), () =>
+            {
+                //处理逻辑
             });
             //Console.WriteLine(configurationRoot["time"]);
 

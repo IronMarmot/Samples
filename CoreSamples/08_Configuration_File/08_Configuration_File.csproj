@@ -30,4 +30,6 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="3.1.3" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties settings_1json__JsonSchema="https://json-schema.org/draft-07/schema" /></VisualStudio></ProjectExtensions>
+
 </Project>

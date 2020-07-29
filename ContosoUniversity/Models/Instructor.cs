@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -8,23 +9,26 @@ using System.Threading.Tasks;
 
 namespace ContosoUniversity.Models
 {
-    public class Student
+    public class Instructor
     {
         public int ID { get; set; }
-        [Display(Name ="Last Name")]
+
         [Required]
         [StringLength(20,MinimumLength =2)]
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
-        [Display(Name ="First Name")]
+
         [Required]
-        [Column("FIrstName")]
-        [StringLength(20)]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
+        [StringLength(20,MinimumLength =2)]
+        [Column("FirstName")]
+        [DisplayName("First Name")]
         public string FirstMidName { get; set; }
-        [DisplayName("Enrollment Date")]
+
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}",ApplyFormatInEditMode =true)]
-        public DateTime EnrollmentDate { get; set; }
+        [Display(Name ="Hire Date")]
+        public DateTime HireDate { get; set; }
+
         [Display(Name ="Full Name")]
         public string FullName
         {
@@ -34,6 +38,7 @@ namespace ContosoUniversity.Models
             }
         }
 
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<CourseAssignment> CourseAssignments { get; set; }
+        public OfficeAssignment OfficeAssignment { get; set; }
     }
 }

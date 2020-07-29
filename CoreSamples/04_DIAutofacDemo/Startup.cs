@@ -32,6 +32,11 @@ namespace _04_DIAutofacDemo
             services.AddControllers();
         }
 
+        /// <summary>
+        /// autofac的服务注册方法，相当于configureService方法
+        /// 当使用ConfigureContainer时，默认的ConfigureService方法会被autofac方法接替
+        /// </summary>
+        /// <param name="containerBuilder"></param>
         public void ConfigureContainer(ContainerBuilder containerBuilder)
         {
             #region 常规注册
@@ -41,17 +46,22 @@ namespace _04_DIAutofacDemo
             #endregion
 
             #region 命名注册
+            //命名注册时，一定是包含类型的，因此保证通过名称一定可以获取。Named有2种方式。
             //containerBuilder.RegisterType<MyService>().Named<IMyService>("myService");
             #endregion
 
             #region 属性注入
+            //属性注入分为2步，先注入属性类型，再在属性类上开启属性注入。
             //containerBuilder.RegisterType<MyNameService>();
             //containerBuilder.RegisterType<MyServiceV2>().As<IMyService>().PropertiesAutowired();
             #endregion
 
             #region AOP
-            //containerBuilder.RegisterType<Interceptor>();
-            //containerBuilder.RegisterType<MyService>().As<IMyService>().InterceptedBy(typeof(Interceptor)).EnableInterfaceInterceptors();
+            //分3步，先注册拦截器，通过InterceptedBy定义服务允许的拦截器类型，再开启拦截器
+            //如果注册多个拦截器，那么拦截器都会执行，而且是按照注册的顺序执行
+            containerBuilder.RegisterType<Interceptor>();
+            containerBuilder.RegisterType<Intercepotor2>();
+            containerBuilder.RegisterType<MyService>().As<IMyService>().InterceptedBy(new Type[] { typeof(Intercepotor2),typeof(Interceptor) }).EnableInterfaceInterceptors();
             #endregion
 
             #region 子容器，除了使用scope方式，还可以使用该方式
@@ -60,6 +70,7 @@ namespace _04_DIAutofacDemo
         }
 
         public ILifetimeScope AutofacContainer { get; private set; }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -77,10 +88,10 @@ namespace _04_DIAutofacDemo
                 var service0 = myscope.Resolve<MyServiceV2>();
                 using (var scope = myscope.BeginLifetimeScope())
                 {
-                    var service1 = myscope.Resolve<MyServiceV2>();
-                    var service2 = myscope.Resolve<MyServiceV2>();
+                    var service1 = scope.Resolve<MyServiceV2>();
+                    var service2 = scope.Resolve<MyServiceV2>();
                     Console.WriteLine($"service1==service2?{service1 == service2}");
-                    Console.WriteLine($"service1==service2?{service0 == service1}");
+                    Console.WriteLine($"service0==service1?{service0 == service1}");
                 }
             }
 

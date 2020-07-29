@@ -38,12 +38,13 @@ namespace _04_DIAutofacDemo.Controllers
         }
 
         [HttpGet]
-        public void GetServices([FromServices]IEnumerable<IMyService> myServices)
+        public int  GetServices([FromServices]IEnumerable<IMyService> myServices)
         {
             foreach (var item in myServices)
             {
                 item.show();
             }
+            return 1;
         }
     }
 }

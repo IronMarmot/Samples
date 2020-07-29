@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ContosoUniversity.Data;
 using ContosoUniversity.Models;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ContosoUniversity.Controllers
 {
@@ -20,9 +21,46 @@ namespace ContosoUniversity.Controllers
         }
 
         // GET: Students
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder,string searchString,string currentFilter,int? pageNumber)
         {
-            return View(await _context.Students.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            //ViewData["CurrentFilter"] = searchString;
+            if (searchString!=null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewData["CurrentFilter"] = searchString;
+            var students = from s in _context.Students
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(o => o.FirstMidName.Contains(searchString) || o.LastName.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(o => o.LastName);
+                    break;
+                case "Date":
+                    students = students.OrderBy(o => o.EnrollmentDate);
+                    break;
+                case "date_desc":
+                    students = students.OrderByDescending(o => o.EnrollmentDate);
+                    break;
+                default:
+                    students = students.OrderBy(o => o.LastName);
+                    break;
+            }
+            int pageSize = 3;
+            return View(await PaginatedList<Student>.CreateAsync(students.AsNoTracking(), pageNumber ?? 1, pageSize));
+            //return View(new PaginatedList<Student>(students.AsNoTracking().ToList(),students.Count(), pageNumber?? 1, pageSize));
+            //return View(await students.AsNoTracking().ToListAsync());
         }
 
         // GET: Students/Details/5
@@ -57,7 +95,7 @@ namespace ContosoUniversity.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,LastName,FirstMidName,EnrollmentDate")] Student student)
+        public async Task<IActionResult> Create([Bind("LastName,FirstMidName,EnrollmentDate")] Student student)
         {
             try
             {
@@ -70,7 +108,7 @@ namespace ContosoUniversity.Controllers
             }
             catch (DbUpdateException)
             {
-                ModelState.AddModelError("", "Unable to save changes.");
+                ModelState.AddModelError("", "Unable to save changes. Try again,and if the problem persists,see your system administrator.");
             }
             return View(student);
         }

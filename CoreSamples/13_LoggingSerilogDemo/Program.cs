@@ -14,6 +14,7 @@ namespace _13_LoggingSerilogDemo
 {
     public class Program
     {
+        //配置定义
         public static IConfiguration Configuration { get; } = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -23,15 +24,19 @@ namespace _13_LoggingSerilogDemo
 
         public static int Main(string[] args)
         {
+            //Log.Logger定义
             Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(Configuration)
-                .MinimumLevel.Debug()
+                .MinimumLevel.Debug()//设置最低等级level
                 .Enrich.FromLogContext()
                 .WriteTo.Console(new RenderedCompactJsonFormatter())
-                .WriteTo.File(formatter: new CompactJsonFormatter(), "logs\\myapp.txt", rollingInterval: RollingInterval.Day)
+                .WriteTo.File(formatter: new CompactJsonFormatter(), "logs\\myapp.txt", rollingInterval: RollingInterval.Day)//在设定的路径下，用文件名和设定的时间周期生成文件名。
+                //.WriteTo.Debug()
                 .CreateLogger();
             try
             {
-                Log.Information("Starting web host");
+                Log.Information("Information:Starting web host");
+                Log.Debug("Debug!!!");
+                Log.Warning("Warning!!!");
                 CreateHostBuilder(args).Build().Run();
                 return 0;
             }
