@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btn_OpenFile = new System.Windows.Forms.Button();
-            this.tb_FileName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lb_FileSize = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_FileName = new System.Windows.Forms.TextBox();
             this.btn_Pause = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btn_OpenFile = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lb_ClientSize = new System.Windows.Forms.Label();
+            this.lb_process = new System.Windows.Forms.Label();
+            this.lb_download = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -62,24 +62,49 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "服务端";
             // 
-            // groupBox2
+            // lb_FileSize
             // 
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(315, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(261, 177);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "客户端";
+            this.lb_FileSize.AutoSize = true;
+            this.lb_FileSize.Location = new System.Drawing.Point(75, 88);
+            this.lb_FileSize.Name = "lb_FileSize";
+            this.lb_FileSize.Size = new System.Drawing.Size(23, 12);
+            this.lb_FileSize.TabIndex = 2;
+            this.lb_FileSize.Text = "0 b";
             // 
-            // openFileDialog1
+            // label2
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "文件大小：";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "文件路径：";
+            // 
+            // tb_FileName
+            // 
+            this.tb_FileName.Location = new System.Drawing.Point(77, 52);
+            this.tb_FileName.Name = "tb_FileName";
+            this.tb_FileName.Size = new System.Drawing.Size(199, 21);
+            this.tb_FileName.TabIndex = 1;
+            // 
+            // btn_Pause
+            // 
+            this.btn_Pause.Location = new System.Drawing.Point(129, 20);
+            this.btn_Pause.Name = "btn_Pause";
+            this.btn_Pause.Size = new System.Drawing.Size(98, 23);
+            this.btn_Pause.TabIndex = 0;
+            this.btn_Pause.Text = "开   始";
+            this.btn_Pause.UseVisualStyleBackColor = true;
+            this.btn_Pause.Click += new System.EventHandler(this.btn_Pause_Click);
             // 
             // btn_OpenFile
             // 
@@ -91,39 +116,47 @@
             this.btn_OpenFile.UseVisualStyleBackColor = true;
             this.btn_OpenFile.Click += new System.EventHandler(this.btn_OpenFile_Click);
             // 
-            // tb_FileName
+            // groupBox2
             // 
-            this.tb_FileName.Location = new System.Drawing.Point(77, 52);
-            this.tb_FileName.Name = "tb_FileName";
-            this.tb_FileName.Size = new System.Drawing.Size(199, 21);
-            this.tb_FileName.TabIndex = 1;
+            this.groupBox2.Controls.Add(this.lb_ClientSize);
+            this.groupBox2.Controls.Add(this.lb_process);
+            this.groupBox2.Controls.Add(this.lb_download);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Location = new System.Drawing.Point(315, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(261, 177);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "客户端";
             // 
-            // label1
+            // lb_ClientSize
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "文件路径：";
+            this.lb_ClientSize.AutoSize = true;
+            this.lb_ClientSize.Location = new System.Drawing.Point(81, 25);
+            this.lb_ClientSize.Name = "lb_ClientSize";
+            this.lb_ClientSize.Size = new System.Drawing.Size(23, 12);
+            this.lb_ClientSize.TabIndex = 3;
+            this.lb_ClientSize.Text = "0 b";
             // 
-            // label2
+            // lb_process
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "文件大小：";
+            this.lb_process.AutoSize = true;
+            this.lb_process.Location = new System.Drawing.Point(81, 88);
+            this.lb_process.Name = "lb_process";
+            this.lb_process.Size = new System.Drawing.Size(23, 12);
+            this.lb_process.TabIndex = 2;
+            this.lb_process.Text = "0 %";
             // 
-            // lb_FileSize
+            // lb_download
             // 
-            this.lb_FileSize.AutoSize = true;
-            this.lb_FileSize.Location = new System.Drawing.Point(75, 88);
-            this.lb_FileSize.Name = "lb_FileSize";
-            this.lb_FileSize.Size = new System.Drawing.Size(29, 12);
-            this.lb_FileSize.TabIndex = 2;
-            this.lb_FileSize.Text = "0 kb";
+            this.lb_download.AutoSize = true;
+            this.lb_download.Location = new System.Drawing.Point(81, 56);
+            this.lb_download.Name = "lb_download";
+            this.lb_download.Size = new System.Drawing.Size(23, 12);
+            this.lb_download.TabIndex = 4;
+            this.lb_download.Text = "0 b";
             // 
             // label4
             // 
@@ -133,42 +166,6 @@
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 2;
             this.label4.Text = "下载进度：";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(81, 88);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 12);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "0 %";
-            // 
-            // btn_Pause
-            // 
-            this.btn_Pause.Location = new System.Drawing.Point(129, 20);
-            this.btn_Pause.Name = "btn_Pause";
-            this.btn_Pause.Size = new System.Drawing.Size(98, 23);
-            this.btn_Pause.TabIndex = 0;
-            this.btn_Pause.Text = "暂   停";
-            this.btn_Pause.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(81, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 12);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "0 kb";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(81, 56);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 12);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "0 kb";
             // 
             // label8
             // 
@@ -187,6 +184,10 @@
             this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 6;
             this.label9.Text = "文件大小：";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -212,14 +213,14 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lb_FileSize;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lb_process;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_FileName;
         private System.Windows.Forms.Button btn_Pause;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lb_ClientSize;
+        private System.Windows.Forms.Label lb_download;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
     }
