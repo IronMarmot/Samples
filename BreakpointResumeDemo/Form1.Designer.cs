@@ -53,11 +53,10 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tb_FileName);
-            this.groupBox1.Controls.Add(this.btn_Pause);
             this.groupBox1.Controls.Add(this.btn_OpenFile);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 177);
+            this.groupBox1.Size = new System.Drawing.Size(258, 177);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "服务端";
@@ -93,12 +92,13 @@
             // 
             this.tb_FileName.Location = new System.Drawing.Point(77, 52);
             this.tb_FileName.Name = "tb_FileName";
-            this.tb_FileName.Size = new System.Drawing.Size(199, 21);
+            this.tb_FileName.ReadOnly = true;
+            this.tb_FileName.Size = new System.Drawing.Size(162, 21);
             this.tb_FileName.TabIndex = 1;
             // 
             // btn_Pause
             // 
-            this.btn_Pause.Location = new System.Drawing.Point(129, 20);
+            this.btn_Pause.Location = new System.Drawing.Point(19, 20);
             this.btn_Pause.Name = "btn_Pause";
             this.btn_Pause.Size = new System.Drawing.Size(98, 23);
             this.btn_Pause.TabIndex = 0;
@@ -110,7 +110,7 @@
             // 
             this.btn_OpenFile.Location = new System.Drawing.Point(13, 20);
             this.btn_OpenFile.Name = "btn_OpenFile";
-            this.btn_OpenFile.Size = new System.Drawing.Size(98, 23);
+            this.btn_OpenFile.Size = new System.Drawing.Size(226, 23);
             this.btn_OpenFile.TabIndex = 0;
             this.btn_OpenFile.Text = "选择文件";
             this.btn_OpenFile.UseVisualStyleBackColor = true;
@@ -122,9 +122,10 @@
             this.groupBox2.Controls.Add(this.lb_process);
             this.groupBox2.Controls.Add(this.lb_download);
             this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.btn_Pause);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(315, 12);
+            this.groupBox2.Location = new System.Drawing.Point(278, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(261, 177);
             this.groupBox2.TabIndex = 0;
@@ -134,7 +135,7 @@
             // lb_ClientSize
             // 
             this.lb_ClientSize.AutoSize = true;
-            this.lb_ClientSize.Location = new System.Drawing.Point(81, 25);
+            this.lb_ClientSize.Location = new System.Drawing.Point(89, 55);
             this.lb_ClientSize.Name = "lb_ClientSize";
             this.lb_ClientSize.Size = new System.Drawing.Size(23, 12);
             this.lb_ClientSize.TabIndex = 3;
@@ -143,7 +144,7 @@
             // lb_process
             // 
             this.lb_process.AutoSize = true;
-            this.lb_process.Location = new System.Drawing.Point(81, 88);
+            this.lb_process.Location = new System.Drawing.Point(89, 118);
             this.lb_process.Name = "lb_process";
             this.lb_process.Size = new System.Drawing.Size(23, 12);
             this.lb_process.TabIndex = 2;
@@ -152,7 +153,7 @@
             // lb_download
             // 
             this.lb_download.AutoSize = true;
-            this.lb_download.Location = new System.Drawing.Point(81, 56);
+            this.lb_download.Location = new System.Drawing.Point(89, 86);
             this.lb_download.Name = "lb_download";
             this.lb_download.Size = new System.Drawing.Size(23, 12);
             this.lb_download.TabIndex = 4;
@@ -161,7 +162,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 88);
+            this.label4.Location = new System.Drawing.Point(25, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 2;
@@ -170,7 +171,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 56);
+            this.label8.Location = new System.Drawing.Point(25, 86);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 12);
             this.label8.TabIndex = 5;
@@ -179,7 +180,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 25);
+            this.label9.Location = new System.Drawing.Point(25, 55);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 6;
@@ -193,11 +194,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 197);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(547, 197);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "断点下载";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

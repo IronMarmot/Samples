@@ -15,14 +15,16 @@ namespace BreakpointResumeDemo
         public string FileName { get; set; }
         public int TotalSize { get; set; }
         public int DownloadSize { get; set; }
+        public int StartPosition { get; set; } = 0;
 
         private int blockLength = 1024*1024;//1M
         private int blockCount = 1;
-        public int StartPosition { get; set; } = 0;
+
+        List<byte[]> datas = new List<byte[]>();
+
         bool isComplete = false;
         public bool isPause = true;
         int fileNum = 0;
-        List<byte[]> datas = new List<byte[]>();
 
         Server server;
         FileStream fileStream;
