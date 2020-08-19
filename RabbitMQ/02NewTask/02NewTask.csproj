@@ -6,4 +6,8 @@
     <RootNamespace>_02NewTask</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="6.1.0" />
+  </ItemGroup>
+
 </Project>
