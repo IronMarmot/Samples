@@ -30,7 +30,7 @@ namespace BreakpointResumeDemo
         public Form1()
         {
             InitializeComponent();
-            btn_Pause.Enabled = false;
+            //btn_Pause.Enabled = false;
 
             timer = new System.Windows.Forms.Timer();
             timer.Tick += Timer_Tick;
@@ -69,10 +69,13 @@ namespace BreakpointResumeDemo
         /// <param name="e"></param>
         private void btn_Pause_Click(object sender, EventArgs e)
         {
-            ChangeStatus();
+            //ChangeStatus();
 
-            Task.Factory.StartNew(new Action(()=> client.DownloadFile()));
-            
+            //Task.Factory.StartNew(new Action(()=> client.DownloadFile()));
+            string path = Path.Combine(Application.StartupPath, "A\\a.vflashpack");
+            FileStream fileStream = new FileStream(path,FileMode.Append,FileAccess.Write,FileShare.ReadWrite);
+            byte[] bt = new byte[] { 12,21,2,3,4,5};
+            fileStream.Write(bt, 0, 5);
         }
 
         private void ChangeStatus()

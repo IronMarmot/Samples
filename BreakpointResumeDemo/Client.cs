@@ -83,6 +83,8 @@ namespace BreakpointResumeDemo
             if (isComplete)
             {
                 StartPosition = 0;
+
+                fileStream.Close();
             }
         }
 
