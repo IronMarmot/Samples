@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ReceiveLogDirect": {
+      "commandName": "Project",
+      "commandLineArgs": "error"
+    }
+  }
+}
