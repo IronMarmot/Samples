@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.23.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\GrpcOrderService\Protos\Order.proto" GrpcServices="Client">
+      <Link>Protos\Order.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+
+</Project>
