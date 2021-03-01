@@ -3,6 +3,7 @@ using System;
 链表处理回文串判断
 首先找到链表的中间节点，对后半部分链表进行反转，然后依次对链表元素进行比较。
 
+链表解法
 */
 namespace Palindrome
 {

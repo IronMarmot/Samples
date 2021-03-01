@@ -1,5 +1,13 @@
 ﻿using System;
 
+/*
+2021-02-24 JackLee
+https://leetcode-cn.com/problems/reverse-linked-list
+
+解法:
+    1.借助3个指针来遍历链表即可
+    2.若要使用递归，则将循环部分提取到方法即可。
+*/
 namespace ReverseList
 {
     public class Class1

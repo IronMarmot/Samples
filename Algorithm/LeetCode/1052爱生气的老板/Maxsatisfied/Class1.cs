@@ -1,7 +1,10 @@
 ﻿using System;
 
-
 /*
+2021-02-23 JackLee
+https://leetcode-cn.com/problems/grumpy-bookstore-owner
+
+
 其实是要求，连续的子数组，使其SUM(customers[i]*grumy[i])最大
 1.第一次编写只是实现了要求，但效率非常低，因为时间复杂度为O(n²)
 2.其实对于满意的客户是不变的，唯一变化的是可增加的生气客户。因此，我们可以在一次遍历过程中，既求出满意客户，又求出可增加的生气客户，相加即为最终结果。

@@ -1,5 +1,8 @@
 ﻿using System;
 /*
+2021-02-25 JackLee
+https://leetcode-cn.com/problems/transpose-matrix/
+
 转置矩阵
 对行索引和列索引进行互换。可以理解为改变数组的遍历顺序，按列进行遍历即可。
 初始化一个数组，行索引和列索引分别为给定数组的列索引和行索引

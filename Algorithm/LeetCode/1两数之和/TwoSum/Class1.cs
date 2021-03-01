@@ -2,15 +2,8 @@
 using System.Collections.Generic;
 
 /*
-2020-2-20
-Link:https://leetcode-cn.com/problems/two-sum/
-
-
-
-
-
-
-
+2021-2-20 JackLee
+https://leetcode-cn.com/problems/two-sum
 
 */
 namespace TwoSum

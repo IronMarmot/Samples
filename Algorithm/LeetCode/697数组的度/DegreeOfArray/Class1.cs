@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 
 
-/*2020-02-20
- * link:https://leetcode-cn.com/problems/degree-of-an-array/
+/*2021-02-20
+ *https://leetcode-cn.com/problems/degree-of-an-array/
  * 
  * 
  * 思路：
